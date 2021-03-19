@@ -1,5 +1,5 @@
 <template>
-	<li class="m-i" :class="classes" @click="changeContent(item.key)">
+	<li class="m-i" :class="classes" @click="changeContent(index)">
 		<a class="i-link" >
 			<em>{{item.name}}</em>
 			<div class="v-num" v-if="showNum">
@@ -25,7 +25,11 @@ export default {
 		item: {
 			type: Object,
 			required: true
-		}
+		},
+		index: {
+			// type: ,
+			// required: true
+		},
 	},
 	computed: {
 		showNum() {
@@ -43,7 +47,7 @@ export default {
         })
       } else {
         this.$router.push({
-          path: `/channel/`
+          path: `/channel/${index}`
         })
       }
     },

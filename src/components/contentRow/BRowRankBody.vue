@@ -2,8 +2,8 @@
 	<div class="b-body">
 		<div class="r-list-body">
 			<div class="r-list-wrapper" ref="listWrapper">
-				<ul class="rlist" v-if="rank.hot">
-					<li :class="{on: index === 0}" v-for="(item, index) in rank.hot.list">
+				<ul class="rlist" >
+					<li :class="{on: index === 0}" v-for="(item, index) in rank.data" :key="index">
 						<i class="number" :class="{n: index === 0 || index === 1 || index === 2}">
 							{{index + 1}}
 						</i>
@@ -24,7 +24,7 @@
 					</li>
 				</ul>
 				<ul class="rlist" v-if="rank.hot_original">
-					<li :class="{on: index === 0}" v-for="(item, index) in rank.hot.list">
+					<li :class="{on: index === 0}" v-for="(item, index) in rank.data" :key="index" >
 						<i class="number" :class="{n: index === 0 || index === 1 || index === 2}">
 							{{index + 1}}
 						</i>
@@ -104,7 +104,7 @@ export default {
 			} 
 
 			let param = {
-				categoryId: this.categoryId
+				rid: this.categoryId
 			}
 			if (this.isWeek) {
 				contentrankApi.contentrankweek(param).then((response) => {

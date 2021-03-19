@@ -22,7 +22,7 @@ export default new Router({
           component: Home
         },
         {
-          path: 'channel',
+          path: 'channel/:index',
           component: ChannelView,
           // children: [
           //   {

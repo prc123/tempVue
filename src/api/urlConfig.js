@@ -19,4 +19,8 @@ export const contet = serverRoot + '/ding'
 export const contentrank = serverRoot + '/contentrank'
 // 一周排行
 export const contentrankweek = serverRoot + '/contentrankweek'
+//分区视频
+export const  region=serverRoot+'/region'
+//分区视频
+export const  regionRank=serverRoot+'/regionrank'
 export const onlinenum = 'https://api.bilibili.com/x/web-interface/online'

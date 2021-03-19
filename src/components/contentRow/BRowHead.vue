@@ -56,53 +56,6 @@ export default {
 			if (this.name){
 				title=this.name
 			}
-
-			// let title = '未知标题';
-			// if (this.category) {
-			// 	switch(this.category) {
-			// 		case 'douga':
-			// 			title = '动画'	
-			// 			break
-			// 		case 'bangumi':
-			// 			title = '番剧'	
-			// 			break
-			// 		case 'music':
-			// 			title = '音乐'	
-			// 			break
-			// 		case 'dance':
-			// 			title = '舞蹈'	
-			// 			break
-			// 		case 'game':
-			// 			title = '游戏'	
-			// 			break
-			// 		case 'technology':
-			// 			title = '科技'	
-			// 			break
-			// 		case 'life':
-			// 			title = '生活'	
-			// 			break
-			// 		case 'kichiku':
-			// 			title = '鬼畜'	
-			// 			break
-			// 		case 'fashion':
-			// 			title = '时尚'	
-			// 			break
-			// 		case 'ad':
-			// 			title = '广告'	
-			// 			break
-			// 		case 'ent':
-			// 			title = '娱乐'	
-			// 			break
-			// 		case 'movie':
-			// 			title = '电影'	
-			// 			break
-			// 		case 'teleplay':
-			// 			title = 'TV剧'	
-			// 			break
-			// 		default:
-			// 			title ="未知标题"
-			// 	}
-			// }
 			return title
 		}
 	},

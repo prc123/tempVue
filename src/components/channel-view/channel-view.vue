@@ -1,19 +1,20 @@
 <template>
 <div class="home"> 
-    <BContent :rows="rows"></BContent>
-    <BNavSide :options="options" v-on:change="isShowMask"></BNavSide>
+    <BchennlContent :rows="rows"></BchennlContent>
+    <!-- <BNavSide :options="options" v-on:change="isShowMask"></BNavSide> -->
     <div class="wnd-mask" ref="mask" v-show="showMask"></div>
 </div>
 </template>
 <script>
-import BContent from 'components/content/BContent.vue'
+import { regionTags, ERR_OK } from 'api/config'
+import BchennlContent from 'components/content/BchennlContent.vue'
 import BNavSide from 'components/nav/BNavSide'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'home',
   components: {
-    BContent,
+    BchennlContent,
     BNavSide
   },
   mounted() {
@@ -21,6 +22,10 @@ export default {
   },
   data() {
     return {
+      indexTab: 0,
+      sindexTab: 0,
+      regionTags: regionTags,
+      regionList: [],
       showMask: false
     }
   },
@@ -38,6 +43,9 @@ export default {
       'error',
       'rows'
     ]),
+    getBlocks () {
+      return regionTags[this.indexTab].blocks
+    },
     options() {
       let options = {
         offset: 100, //偏移的距离
@@ -47,11 +55,26 @@ export default {
       return options
     }
   },
+ 
+
   methods: {
     isShowMask() {
       this.showMask = !this.showMask
-    }
-  }
+    },
+    _getIndexTab () {
+      if (isNaN(this.$route.params.index)) {
+        this.indexTab = 0
+      } else {
+        this.indexTab = this.$route.params.index
+        this.sindexTab = 0
+      }
+    },
+
+  },
+    selectItem (item) {
+      this.$router.push({ name: 'video', params: { bvid: item.bvid } })
+    },
+ 
 }
 </script>
 

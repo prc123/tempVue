@@ -2,7 +2,7 @@
   <div class="menu">
     <div class="menu-wrapper">
       <ul class="nav-menu">
-        <BMenuItem v-for="(i, index) in regionTags" :item="i" :key="index" ></BMenuItem>
+        <BMenuItem v-for="(i, index) in regionTags" :item="i"  :index="index" :key="index" ></BMenuItem>
 		 <!-- <li v-for="(item, index) in regionTags" :item=item :key="index">
                   <span>{{item.name}}</span>
                 </li> -->
@@ -51,21 +51,6 @@ export default {
       regionTags,
     };
   },
- 	methods:{
-	changeContent (index) {
-		console.log(index)
-      if (index === 0) {
-        this.$router.push({
-          path: '/home'
-        })
-      } else {
-        this.$router.push({
-          path: `/channel/`
-        })
-      }
-    },
-	},
-
   	components: {
 		BMenuItem
 	}

@@ -20,12 +20,12 @@ export const regionTags = [
     key: 1,
     sortKeys:'douga',
     blocks: [
-      { name: '推荐', key: 1 },
-      { name: 'MAD·AMV', key: 24 },
-      { name: 'MMD·3D', key: 25 },
-      { name: '短片·手书·配音', key: 47 },
-      { name: '特摄', key: 86 },
-      { name: '综合', key: 27 }
+      { name: '推荐', sortKeys:'douga',key: 1 },
+      { name: 'MAD·AMV',sortKeys:'mad', key: 24 },
+      { name: 'MMD·3D', sortKeys:'mmd',key: 25 },
+      { name: '短片·手书·配音',sortKeys:'voice', key: 47 },
+      { name: '特摄', sortKeys:'tokusatsu',key: 86 },
+      { name: '综合', sortKeys:'other',key: 27 }
     ]
   },
   {
@@ -33,11 +33,11 @@ export const regionTags = [
     sortKeys:'anime',
     key: 13,
     blocks: [
-      { name: '推荐', key: 13 },
-      { name: '连载动画', key: 33 },
-      { name: '完结动画', key: 32 },
-      { name: '资讯', key: 51 },
-      { name: '官方延伸', key: 152 }
+      { name: '推荐', sortKeys:'anime',key: 13 },
+      { name: '连载动画', sortKeys:'serial',key: 33 },
+      { name: '完结动画', sortKeys:'finish',key: 32 },
+      { name: '资讯', sortKeys:'information',key: 51 },
+      { name: '官方延伸',sortKeys:'offical', key: 152 }
     ]
   },
   {
@@ -45,12 +45,12 @@ export const regionTags = [
     key: 167,
     sortKeys:'guochuang',
     blocks: [
-      { name: '推荐', key: 167 },
-      { name: '国产动画', key: 153 },
-      { name: '国产原创相关', key: 168 },
-      { name: '布袋戏', key: 169 },
-      { name: '动态漫·广播剧', key: 195 },
-      { name: '资讯', key: 170 }
+      { name: '推荐', sortKeys:'guochuang',key: 167 },
+      { name: '国产动画',sortKeys:'chinese', key: 153 },
+      { name: '国产原创相关',sortKeys:'original', key: 168 },
+      { name: '布袋戏', sortKeys:'puppetry',key: 169 },
+      { name: '动态漫·广播剧', sortKeys:'motioncomic',key: 195 },
+      { name: '资讯', sortKeys:'information',key: 170 }
     ]
   },
   {
@@ -58,15 +58,15 @@ export const regionTags = [
     key: 3,
     sortKeys:'music',
     blocks: [
-      { name: '推荐', key: 3 },
-      { name: '原创音乐', key: 28 },
-      { name: '翻唱', key: 31 },
-      { name: 'VOCALOID·UTAU', key: 30 },
-      { name: '电音', key: 194 },
-      { name: '演奏', key: 59 },
-      { name: 'MV', key: 193 },
-      { name: '音乐现场', key: 29 },
-      { name: '音乐综合', key: 130 }
+      { name: '推荐',sortKeys:'music', key: 3 },
+      { name: '原创音乐',sortKeys:'original', key: 28 },
+      { name: '翻唱',sortKeys:'cover', key: 31 },
+      { name: 'VOCALOID·UTAU', sortKeys:'vocaloid',key: 30 },
+      { name: '电音',sortKeys:'electronic', key: 194 },
+      { name: '演奏',sortKeys:'perform', key: 59 },
+      { name: 'MV', sortKeys:'mv',key: 193 },
+      { name: '音乐现场', sortKeys:'live',key: 29 },
+      { name: '音乐综合',sortKeys:'other', key: 130 }
     ]
   },
   {
@@ -74,13 +74,13 @@ export const regionTags = [
     key: 129,
     sortKeys:'dance',
     blocks: [
-      { name: '推荐', key: 129 },
-      { name: '宅舞', key: 20 },
-      { name: '街舞', key: 198 },
-      { name: '明星舞蹈', key: 199 },
-      { name: '中国舞', key: 200 },
-      { name: '舞蹈综合', key: 154 },
-      { name: '舞蹈教程', key: 156 }
+      { name: '推荐', sortKeys:'dance',key: 129 },
+      { name: '宅舞', sortKeys:'otaku',key: 20 },
+      { name: '街舞', sortKeys:'hiphop',key: 198 },
+      { name: '明星舞蹈', sortKeys:'star',key: 199 },
+      { name: '中国舞', sortKeys:'china',key: 200 },
+      { name: '舞蹈综合', sortKeys:'three_d',key: 154 },
+      { name: '舞蹈教程', sortKeys:'demo',key: 156 }
     ]
   },
   {
@@ -88,15 +88,15 @@ export const regionTags = [
     key: 4,
     sortKeys:'game',
     blocks: [
-      { name: '推荐', key: 4 },
-      { name: '单机游戏', key: 17 },
-      { name: '电子竞技', key: 171 },
-      { name: '手机游戏', key: 172 },
-      { name: '网络游戏', key: 65 },
-      { name: '桌游棋牌', key: 173 },
-      { name: 'GMV', key: 121 },
-      { name: '音游', key: 136 },
-      { name: 'Mugen', key: 19 }
+      { name: '推荐', sortKeys:'game',key: 4 },
+      { name: '单机游戏', sortKeys:'stand_alone',key: 17 },
+      { name: '电子竞技', sortKeys:'esports',key: 171 },
+      { name: '手机游戏', sortKeys:'mobile',key: 172 },
+      { name: '网络游戏', sortKeys:'online',key: 65 },
+      { name: '桌游棋牌', sortKeys:'board',key: 173 },
+      { name: 'GMV', sortKeys:'gmv',key: 121 },
+      { name: '音游', sortKeys:'music',key: 136 },
+      { name: 'Mugen', sortKeys:'mugen',key: 19 }
     ]
   },
   {
@@ -104,14 +104,13 @@ export const regionTags = [
     key: 36,
     sortKeys:'technology',
     blocks: [
-      { name: '推荐', key: 36 },
-      { name: '科学科普', key: 201 },
-      { name: '社科人文', key: 124 },
-      { name: '野生技术协会', key: 122 },
-      { name: '演讲·公开课', key: 39 },
-      { name: '星海', key: 96 },
-      { name: '机械', key: 98 },
-      { name: '汽车', key: 176 }
+      { name: '推荐', sortKeys:'technology',key: 36 },
+      { name: '科学科普', sortKeys:'science',key: 201 },
+      { name: '社科人文', sortKeys:'fun',key: 124 },
+      { name: '野生技术协会', sortKeys:'wild',key: 122 },
+      { name: '财经', sortKeys:'finance',key: 207 },
+      { name: '校园学习', sortKeys:'campus',key: 208 },
+      { name: '职业职场', sortKeys:'career',key: 209 },
     ]
   },
   {
@@ -119,11 +118,11 @@ export const regionTags = [
     key: 188,
     sortKeys:'digital',
     blocks: [
-      { name: '推荐', key: 188 },
-      { name: '手机平板', key: 95 },
-      { name: '电脑装机', key: 189 },
-      { name: '摄影摄像', key: 190 },
-      { name: '影音智能', key: 191 }
+      { name: '推荐', sortKeys:'digital',key: 188 },
+      { name: '手机平板', sortKeys:'mobile',key: 95 },
+      { name: '电脑装机', sortKeys:'pc',key: 189 },
+      { name: '摄影摄像', sortKeys:'photography',key: 190 },
+      { name: '影音智能', sortKeys:'intelligence_av',key: 191 }
     ]
   },
   {
@@ -131,15 +130,14 @@ export const regionTags = [
     key: 160,
     sortKeys:'life',
     blocks: [
-      { name: '推荐', key: 160 },
-      { name: '搞笑', key: 138 },
-      { name: '日常', key: 21 },
-      { name: '美食圈', key: 76 },
-      { name: '动物圈', key: 75 },
-      { name: '手工', key: 161 },
-      { name: '绘画', key: 162 },
-      { name: '运动', key: 163 },
-      { name: '其他', key: 174 }
+      { name: '推荐', sortKeys:'life',key: 160 },
+      { name: '搞笑', sortKeys:'funny',key: 138 },
+      { name: '日常', sortKeys:'daily',key: 21 },
+      { name: '手工', sortKeys:'handmake',key: 161 },
+      { name: '绘画', sortKeys:'painting',key: 162 },
+      { name: '运动', sortKeys:'sports',key: 163 },
+      { name: '汽车', sortKeys:'automobile',key: 176 },
+      { name: '其他', sortKeys:'other',key: 174 }
     ]
   },
   {
@@ -147,11 +145,11 @@ export const regionTags = [
     key: 119,
     sortKeys:'kichiku',
     blocks: [
-      { name: '推荐', key: 119 },
-      { name: '鬼畜调教', key: 22 },
-      { name: '音MAD', key: 26 },
-      { name: '人力VOCALOID', key: 126 },
-      { name: '教程演示', key: 127 }
+      { name: '推荐', sortKeys:'kichiku',key: 119 },
+      { name: '鬼畜调教', sortKeys:'guide',key: 22 },
+      { name: '音MAD', sortKeys:'mad',key: 26 },
+      { name: '人力VOCALOID', sortKeys:'manual_vocaloid',key: 126 },
+      { name: '教程演示', sortKeys:'course',key: 127 }
     ]
   },
   {
@@ -159,12 +157,12 @@ export const regionTags = [
     key: 155,
     sortKeys:'fashion',
     blocks: [
-      { name: '推荐', key: 155 },
-      { name: '美妆', key: 157 },
-      { name: '服饰', key: 158 },
-      { name: '健身', key: 164 },
-      { name: 'T台', key: 159 },
-      { name: '风尚标', key: 192 }
+      { name: '推荐', sortKeys:'fashion',key: 155 },
+      { name: '美妆', sortKeys:'makeup',key: 157 },
+      { name: '服饰', sortKeys:'clothing',key: 158 },
+      { name: '健身', sortKeys:'aerobics',key: 164 },
+      { name: 'T台', sortKeys:'catwalk',key: 159 },
+      { name: '风尚标', sortKeys:'trends',key: 192 }
     ]
   },
   {
@@ -172,10 +170,9 @@ export const regionTags = [
     key: 5,
     sortKeys:'ent',
     blocks: [
-      { name: '推荐', key: 5 },
-      { name: '综艺', key: 71 },
-      { name: '明星', key: 137 },
-      { name: 'Korea相关', key: 131 }
+      { name: '推荐', sortKeys:'ent',key: 5 },
+      { name: '综艺', sortKeys:'variety	',key: 71 },
+      { name: '明星', sortKeys:'star',key: 137 },
     ]
   },
   {
@@ -183,19 +180,19 @@ export const regionTags = [
     key: 181,
     sortKeys:'cinephile',
     blocks: [
-      { name: '推荐', key: 181 },
-      { name: '影视杂谈', key: 182 },
-      { name: '影视剪辑', key: 183 },
-      { name: '短片', key: 85 },
-      { name: '预告·资讯', key: 184 }
+      { name: '推荐', sortKeys:'cinephile',key: 181 },
+      { name: '影视杂谈', sortKeys:'cinecism',key: 182 },
+      { name: '影视剪辑', sortKeys:'montage',key: 183 },
+      { name: '短片', sortKeys:'shortfilm',key: 85 },
+      { name: '预告·资讯', sortKeys:'trailer_info',key: 184 }
     ]
   },
   // {
   //   name: '广告',
-  //   key: 165,
+  //   sortKeys:'douga',key: 165,
   //   sortKeys:'douga',
   //   blocks: [
-  //     { name: '推荐', key: 165 }
+  //     { name: '推荐', sortKeys:'douga',key: 165 }
   //   ]
   // },
   {
@@ -203,11 +200,11 @@ export const regionTags = [
     key: 177,
     sortKeys:'documentary',
     blocks: [
-      { name: '推荐', key: 177 },
-      { name: '人文·历史', key: 37 },
-      { name: '科学·探索·自然', key: 178 },
-      { name: '军事', key: 179 },
-      { name: '社会·美食·旅行', key: 180 }
+      { name: '推荐', sortKeys:'documentary',key: 177 },
+      { name: '人文·历史', sortKeys:'history',key: 37 },
+      { name: '科学·探索·自然', sortKeys:'science',key: 178 },
+      { name: '军事', sortKeys:'military',key: 179 },
+      { name: '社会·美食·旅行', sortKeys:'travel',key: 180 }
     ]
   },
   {
@@ -215,11 +212,11 @@ export const regionTags = [
     key: 23,
     sortKeys:'movie',
     blocks: [
-      { name: '推荐', key: 23 },
-      { name: '华语电影', key: 147 },
-      { name: '欧美电影', key: 145 },
-      { name: '日本电影', key: 146 },
-      { name: '其他国家', key: 83 }
+      { name: '推荐', sortKeys:'movie',key: 23 },
+      { name: '华语电影', sortKeys:'chinese',key: 147 },
+      { name: '欧美电影', sortKeys:'west',key: 145 },
+      { name: '日本电影', sortKeys:'japan',key: 146 },
+      { name: '其他国家', sortKeys:'movie',key: 83 }
     ]
   },
   {
@@ -227,9 +224,9 @@ export const regionTags = [
     key: 11,
     sortKeys:'tv',
     blocks: [
-      { name: '推荐', key: 11 },
-      { name: '国产剧', key: 185 },
-      { name: '海外剧', key: 187 }
+      { name: '推荐', sortKeys:'tv',key: 11 },
+      { name: '国产剧', sortKeys:'mainland',key: 185 },
+      { name: '海外剧', sortKeys:'overseas',key: 187 }
     ]
   },
   { name: '直播', key: -1 },

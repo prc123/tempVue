@@ -53,7 +53,7 @@ const actions = {
 		})
 	},
 	getContentRank({commit, state, rootState}, categoryId) {
-		console.log(categoryId)
+
 		rootState.requesting = true
 		commit(TYPE.CONTENT_RANK_REQUEST)
 		let param = {
@@ -91,10 +91,8 @@ const mutations = {
 	},
 	[TYPE.CONTENT_SUCCESS] (state, response) {
 			for (let i = 0; i < state.regionTags.length; i++) {
-				console.log(state.regionTags.length)
 				let category = state.regionTags[i].sortKeys
 				if (response[category]==undefined){
-					console.log(state.rows)
 					continue;
 				}
 				let rowItem = {
@@ -104,7 +102,6 @@ const mutations = {
 					b_id: `b_${category}`,
 					item: Object.values(response[category])
 				}
-				console.log(rowItem)
 				state.rows.push(rowItem)
 			}
 

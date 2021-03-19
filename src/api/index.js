@@ -49,12 +49,14 @@ export const contentApi = {
 // 具体内容的三日排行榜信息
 export const contentrankApi = {
 	contentrank(param) {
-		return axios.post(url.contentrank, param).then((response) => {
+		param.day=3
+		return axios.get(url.regionRank, {params:param}).then((response) => {
 			return response.data
 		})
 	},
 	contentrankweek(param) {
-		return axios.post(url.contentrankweek, param).then((response) => {
+		param.day=7
+		return axios.get(url.regionRank, {params:param}).then((response) => {
 			return response.data
 		})
 	}
@@ -67,6 +69,23 @@ export const olinenumApi={
 	    })
    }
 }
+
+
+
+export const regionApi={
+	getRegion (ps, rid) {
+		const data1 = {
+		  rid
+		}
+		if (ps >= 0) data1.ps = ps
+		return axios.get(url.region, {
+		  params: data1
+		}).then((response) => {
+			return response.data
+	    })
+	  }
+}
+
 
 export const recommendApi={
 	recommend(){
