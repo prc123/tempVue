@@ -58,14 +58,12 @@ export default {
   },
   create() {
     this.getrouterindex();
-    // console.log("hello")
-    // console.log(this.index)
+
     this.getrows();
   },
   mounted() {
     this.getrouterindex();
-    // console.log("hello")
-    // console.log(this.index)
+
     this.getrows();
   },
   methods: {
@@ -83,10 +81,7 @@ export default {
         let block = blocks[i];
         let category = block.sortKeys;
         regionApi.getRegion(15, block.key).then((response) => {
-          let resp = response.data;
-        //   console.log(this.resp)
-        //   console.log(response)
-
+        let resp = response.data;
         let rowItem = {
         category: category,
         categoryId: block.key,
@@ -95,12 +90,13 @@ export default {
         item: Object.values(resp["archives"]),
         };
         this.rows.push(rowItem);
-        });
-        // console.log(resp["archives"])
+        }, (error) => {
+        console.log(error)
+		});
 
       }
     },
-    // return  regionApi.getRegion(ps,rid)
+
   },
     watch: {
     '$route' () {
@@ -111,7 +107,7 @@ export default {
         setTimeout(() => {
           this.getrows()
           this.forceRerender()
-          console.log(this.componentKey)
+        //   console.log(this.componentKey)
         }, 20)
       }
     }

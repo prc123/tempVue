@@ -77,6 +77,8 @@ export default {
 			display inline-block
 			&.douga
 				background-position -141px -908px
+			&.guochuang
+				background-position -141px -908px
 			&.bangumi
 				background-position -141px -140px
 			&.music

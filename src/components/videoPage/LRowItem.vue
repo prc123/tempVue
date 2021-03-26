@@ -28,17 +28,21 @@
 				</div>
 			</a>
 					<!-- 下部分 -->
+			<div class="info">
 			<a  @click="selectItem(item.bvid)" target="_blank">
 				<div class="t">{{item.title}}</div>
+				<div class="name" style="margin-bottom:6px">{{item.owner.name}}</div>
 				<div class="i">
 					<span>
-						<i class="b-icon b-icon-v-play"></i>{{view}}
-						</span><span>
+						<i class="b-icon b-icon-v-play"></i>{{view}}播放&nbsp;·&nbsp;
+						</span>
+					<span>
 						<i class="b-icon b-icon-v-dm"></i>
-						{{item.stat.reply}}
+						{{item.stat.reply}}弹幕
 					</span>
 				</div>
 			</a>
+			</div>
 		</div>
 	</li>
 </template>
@@ -89,16 +93,19 @@ export default {
 		margin 0 20px 20px 0
 		.v
 			position relative
-			width 160px
-			height 148px
+			// width 160px
+			// height 148px
 			font-size 12px
 			overflow hidden
 			transition all .3s linear
+			display:flex
 			.x
 				visibility hidden
 				opacity 0
 			.cover-preview
 				position relative
+				width 141px
+				height 80px
 				.back
 					position absolute
 					top 0px
@@ -160,9 +167,9 @@ export default {
 						.bar
 							opacity 1
 			.preview
-				width 160px
-				height 100px
-				display block
+				width 141px
+				height 80px
+				display inline-block
 				overflow hidden
 				text-align center
 				transition .2s all linear
@@ -188,10 +195,14 @@ export default {
 					display block
 					margin 0 auto
 					outline 0
+			.info 
+				margin-left 10px
+				width 169px
+				height 36px
 			.t
-				margin-bottom 8px
-				padding-top 8px
-				height 20px
+
+				margin-bottom 10px
+				height 36px
 				line-height 20px
 				transition all .2s linear
 				color #222
@@ -199,25 +210,28 @@ export default {
 				word-break break-all
 				overflow hidden
 				text-align left
+				font-size 14px
+    			font-weight 500
+			.name
+
+				font-size 12px
+				line-height 12px
 			.i
 				margin 0
 				font-size 12px
 				line-height 12px
+				display inline-block
 				span
-					display inline-block
-					vertical-align top
 					color #99a2aa
-					width 80px
-					white-space nowrap
-					overflow hidden
-					text-overflow ellipsis
+					width 79px
+					// white-space nowrap
+					// overflow hidden
+					// text-overflow ellipsis
 					line-height 12px
 					height 14px
 					.b-icon
-						display inline-block
 						width 12px
 						height 12px
-						vertical-align middle
 						background url(../../assets/images/icons.png) no-repeat
 						vertical-align top
 						margin-right 5px
@@ -225,13 +239,6 @@ export default {
 							background-position -282px -90px
 						&.b-icon-v-dm
 							background-position -282px -218px
-			&:hover 
-				.t
-					height 40px
-					color #00a1d6
-				.x
-					opacity 1
-					visibility visible
 
 
 </style>

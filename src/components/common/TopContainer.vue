@@ -9,9 +9,12 @@
         <div class="z_top_nav">
           <ul>
             <li class="home">
-              <a class="i-link" href="//www.bilibili.com/">
+              <router-link :to="{path:'/Home'}">
+              <a class="i-link">
+              
                 <span>主站</span>
               </a>
+              </router-link>
             </li>
             <li class="hbili">
               <a class="i-link" href="//www.bilibili.com/anime//" title="番剧">番剧</a>

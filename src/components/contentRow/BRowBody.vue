@@ -1,7 +1,7 @@
 <template>
 	<div class="b-body">
 		<ul class="vidbox v-list">
-			<BRowItem v-for="item in row" :item="item"></BRowItem>
+			<BRowItem v-for="(item,index) in row" :item="item" :key="index"></BRowItem>
 		</ul>
 	</div>
 </template>

@@ -3,12 +3,13 @@ import Router from 'vue-router'
 import Index from 'components/index/index'
 import Home from 'components/home/home'
 import ChannelView from 'components/channel-view/channel-view'
+import  videopage from 'components/videoPage/videopage'
 Vue.use(Router)
 
-const originalPush = Router.prototype.push
-Router.prototype.push = function push (location) {
-  return originalPush.call(this, location).catch(err => err)
-}
+// const originalPush = Router.prototype.push
+// Router.prototype.push = function push (location) {
+//   return originalPush.call(this, location).catch(err => err)
+// }
 
 export default new Router({
   routes: [
@@ -33,12 +34,13 @@ export default new Router({
         }
 
        ]
+      },
     // },
-    // {
-    //   name: 'video',
-    //   path: '/video/:bvid',
-    //   component: Video
-    // },
+    {
+      name: 'video',
+      path: '/video/:bvid',
+      component: videopage
+    },
     // {
     //   name: 'search',
     //   path: '/search',
@@ -60,6 +62,6 @@ export default new Router({
     //       component: VideoList
     //     }
      // ]
-     }
+    
   ]
 })

@@ -31,8 +31,7 @@ const mutations = {
 
 	},
 	[TYPE.RANK_LIST_SUCCESS] (state, response) {
-		// /console.log(response)
-		// state.ranklist = _.values(response.recommend.list)
+
 		state.ranklist = response.list
 	},
 	[TYPE.RANK_LIST_FAILURE] (state) {

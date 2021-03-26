@@ -61,9 +61,6 @@ const actions = {
 		}
 		contentrankApi.contentrank(param).then((response) => {
 			rootState.requesting = false
-			if (categoryId === 1) {
-				console.log(response)
-			}
 			commit(TYPE.CONTENT_RANK_SUCCESS, response)
 		}, (error) => {
 			rootState.requesting = false
@@ -90,6 +87,7 @@ const mutations = {
 
 	},
 	[TYPE.CONTENT_SUCCESS] (state, response) {
+			state.rows=[]
 			for (let i = 0; i < state.regionTags.length; i++) {
 				let category = state.regionTags[i].sortKeys
 				if (response[category]==undefined){
