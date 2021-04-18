@@ -1,7 +1,7 @@
 <template>
 	<div class="b-section-body">
 		<div class="b-l">
-			<BRowHead :category="category" :name="name"></BRowHead>
+			<BRowHead :category="category" :name="name" :index="index"></BRowHead>
 			<BRowBody :row="row"></BRowBody>
 		</div>
 		<div class="b-r">
@@ -28,6 +28,9 @@ export default {
 		},
 		name:{
 			type:String
+		},
+		index:{
+			type:Number
 		}
 	},
 	computed: {

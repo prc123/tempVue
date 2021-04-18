@@ -33,6 +33,7 @@
         :row="row.item"
         :name="row.name"
         :key="componentKey"
+        :index="index"
       ></BContentRow>
     </div>
   </div>

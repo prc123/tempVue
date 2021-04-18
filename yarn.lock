@@ -3419,6 +3419,11 @@
   "resolved" "https://registry.npm.taobao.org/js-calendar/download/js-calendar-1.2.3.tgz"
   "version" "1.2.3"
 
+"js-md5@^0.7.3":
+  "integrity" "sha1-tPL7sLMnRV9ZjWcn447Ccs0Jw/I="
+  "resolved" "https://registry.npm.taobao.org/js-md5/download/js-md5-0.7.3.tgz"
+  "version" "0.7.3"
+
 "js-tokens@^3.0.0", "js-tokens@^3.0.2":
   "integrity" "sha512-RjTcuD4xjtthQkaWH7dFlH85L+QaVtSoOyGdZ3g6HFhS9dFNDfLyqgm2NFe2X6cQpeFmt0452FJjFG5UameExg=="
   "resolved" "http://registry.npm.taobao.org/js-tokens/download/js-tokens-3.0.2.tgz"

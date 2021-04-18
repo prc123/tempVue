@@ -4,6 +4,7 @@ import Index from 'components/index/index'
 import Home from 'components/home/home'
 import ChannelView from 'components/channel-view/channel-view'
 import  videopage from 'components/videoPage/videopage'
+import  videoinfo from 'components/videoInfo/videoinfo'
 Vue.use(Router)
 
 // const originalPush = Router.prototype.push
@@ -40,6 +41,11 @@ export default new Router({
       name: 'video',
       path: '/video/:bvid',
       component: videopage
+    },
+    {
+      name: 'videoinfo',
+      path: '/videoinfo/:bvid',
+      component: videoinfo
     },
     // {
     //   name: 'search',

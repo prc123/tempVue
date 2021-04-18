@@ -10,7 +10,8 @@ export default {
 }
 </script>
 
-<style>
-#app {
-}
+<style scoped  lang="stylus" >
+#app{}
+
+
 </style>

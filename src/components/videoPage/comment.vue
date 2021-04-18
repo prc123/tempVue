@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script >
 import { formatNumber, formatDate } from 'src/lib/utils/util'
 export default {
   props: {
@@ -48,6 +48,10 @@ export default {
       // default: () => []
     }
   },
+  data(){
+    return {commentList:this.list.slice(0,10)}
+  },
+
   created(){
     console.log(this.list)
   },
@@ -68,6 +72,7 @@ export default {
 @import '~src/stylus/variable.styl';
 @import '~src/stylus/mixin.styl';
 .comment {
+  display block
   .list {
     .comment-item {
       padding: 12px;

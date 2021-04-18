@@ -1,5 +1,5 @@
 <template>
-    <div class="video-toolbar border-bottom">
+    <div class="video-toolbar border-bottom" v-if="statCount">
         <span class="toolbar-item">
             <i class="icon-dianzan"></i>
             <span class="infont">{{statCount.like|iniView}}</span>
@@ -18,7 +18,7 @@
         </span>
     </div>
 </template>
-<script type="text/ecmascript-6">
+<script >
 export default {
     props: {
 		statCount: {
@@ -27,19 +27,18 @@ export default {
 	},
     filters:{
     iniView(inNum){
-    var str
-    if (inNum==undefined){
-        console.log("sdgafhjagdjfka")
-        return inNum
-    }
-    if (inNum<10000) {
-        str=inNum.toString()
-    } else {
-        str= parseFloat(inNum/10000).toFixed(1).toString()
-        str=str+"万"
-    }
-    return str
-},
+        var str
+        if (inNum==undefined){
+            return inNum
+        }
+        if (inNum<10000) {
+            str=inNum.toString()
+        } else {
+            str= parseFloat(inNum/10000).toFixed(1).toString()
+            str=str+"万"
+        }
+        return str
+    },
   },
 }
 </script>

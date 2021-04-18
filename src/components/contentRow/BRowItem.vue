@@ -75,11 +75,11 @@ export default {
 		return str
 	}
 	},
-	computed: {
-		hreflink() {
-			return 'http://www.bilibili.com/video/av' + this.item.aid
-		}
-	}
+	// computed: {
+	// 	hreflink() {
+	// 		return 'http://www.bilibili.com/video/av' + this.item.aid
+	// 	}
+	// }
 }
 </script>
 

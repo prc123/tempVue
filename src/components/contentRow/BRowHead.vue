@@ -1,6 +1,6 @@
 <template>
 	<div class="b-head">
-		<span class="b-head-i" :class="category"></span>
+		<span class="b-head-i" :class="[category, picClass[index]]" > </span>
 		<span class="b-head-t">
 			<a href="" :title="title">
 				<h2>{{title}}</h2>
@@ -45,6 +45,14 @@ export default {
 		},
 		name:{
 			type:String
+		},
+		index:{
+			type:Number
+		}
+	},
+	data(){
+		return{
+			picClass:['douga','bangumi', 'music','dance','game','technology' ,'life','kichiku','fashion','ad','ent' , 'movie' , 'teleplay' ]
 		}
 	},
 

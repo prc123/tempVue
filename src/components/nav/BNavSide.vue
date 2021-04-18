@@ -7,14 +7,14 @@
 			</div>
 		</transition>
 		<div class="nav-list" ref="list">
-			<template v-for="(item, index) in data">
-				<div v-if="isDrag && index === replaceItem && replaceItem <= dragId" class="n-i sotrable">
+			<template v-for="(item, index) in data" >
+				<div v-if="isDrag && index === replaceItem && replaceItem <= dragId" class="n-i sotrable" :key=index>
 					<div class="name"></div>
 				</div>
-				<div class="n-i sotrable" :class="[{'on': current===index && !isSort}, {'drag': isDrag && current === index}]"  @click="setEnable(index)" @mousedown="dragStart($event, index)" :style="dragStyles">
+				<div class="n-i sotrable" :class="[{'on': current===index && !isSort}, {'drag': isDrag && current === index}]"  @click="setEnable(index)" @mousedown="dragStart($event, index)" :style="dragStyles" :key=index>
 					<div class="name">{{item.name}}</div>
 				</div>
-				<div v-if="isDrag && index === replaceItem && replaceItem > dragId" class="n-i sotrable">
+				<div v-if="isDrag && index === replaceItem && replaceItem > dragId" class="n-i sotrable" :key=index >
 					<div class="name"></div>
 				</div>
 			</template>

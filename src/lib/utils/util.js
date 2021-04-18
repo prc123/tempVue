@@ -80,3 +80,4 @@ export function setHighlight (keyword, item, className) {
   })
   return item
 }
+

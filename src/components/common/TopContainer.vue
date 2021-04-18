@@ -11,7 +11,6 @@
             <li class="home">
               <router-link :to="{path:'/Home'}">
               <a class="i-link">
-              
                 <span>主站</span>
               </a>
               </router-link>
@@ -39,7 +38,7 @@
         <div class="uns_box">
           <ul class="menu">
             <li id="i_menu_login_reg" guest="yes" class="u-i" style="display: list-item">
-              <a id="i_menu_login_btn" class="i-link login" href="https://account.bilibili.com/login">
+              <a id="i_menu_login_btn" class="i-link login" @click="_loginShow">
                 <span>登录</span>
               </a>
               <i class="s-line"></i>
@@ -53,25 +52,43 @@
             </li>
           </ul>
         </div>
+       <div class="i_login" v-if="loginShow"> 
+                <login ref="logindiv"/>
+          </div>
       </div>
     </div>
+    <div class="popContainer" v-if="loginShow" @click="_loginDis"></div>
   </div>
 </template>
 
 <script>
 import PostMaterial from './PostMaterial.vue'
+import login from'components/login/login'
 export default {
   data() {
     return {
-      isShowPostMenu: false
+      isShowPostMenu: false,
+      loginShow:false
     }
   },
   components: {
-    PostMaterial
+    PostMaterial,
+    login
   },
   methods: {
     showPostMenu() {
       this.isShowPostMenu = !this.isShowPostMenu
+    },
+    _loginShow(){
+      if (!this.loginShow){
+        this.loginShow=true
+      }
+      
+    },
+    _loginDis(){
+      if (this.loginShow){
+        this.loginShow=false
+      }
     }
   }
 }
@@ -82,6 +99,13 @@ export default {
     color #222
     position relative
     z-index 10000
+    .popContainer 
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
     .z_top
       background-color transparent
       height 42px

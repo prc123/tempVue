@@ -3,6 +3,8 @@ const serverRoot = `${process.env.NODE_ENV === 'production' ? 'http://www.lybens
 const serverAPi = `${process.env.NODE_ENV === 'production' ? 'http://www.lybenson.com' : 'http://127.0.0.1'}:9050`  /// "https://api.bilibili.com/"
 
 
+
+
 export const banner = serverRoot + '/banner'
 
 export const ranking3 = serverRoot + '/ranking3'
@@ -35,3 +37,9 @@ export const videoComment = serverAPi +'/x/v2/reply/main'
 export const videotags= serverAPi +'/x/tag/archive/tags'
 
 export const videoFull = serverAPi + '/videoFull'
+
+export const videoDownload = serverAPi + '/x/videoDownload'
+
+export const upcookies = serverAPi + '/user/upcookies'
+
+export const videoDataInfo = serverAPi + '/x/videodatainfo'

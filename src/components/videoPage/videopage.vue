@@ -1,10 +1,10 @@
 <template>
-  <div id="index">
+  <div id="videopage">
     <TopContainer></TopContainer>
     <!-- <BHeader></BHeader> -->
     <div class= "v-warp">
         <div class="v-R"> <videoR :bvid="bvid" :videoInfo="videoInfo" :fold="fold" :commentList="commentList" :statCount="statCount"></videoR> </div>
-        <div class="v-L"> <videoL :recommendList="recommendList"  :upInfo="upInfo"></videoL> </div>
+        <div class="v-L"> <videoL :bvid="bvid" :videoInfo="videoInfo" :recommendList="recommendList"  :upInfo="upInfo"></videoL> </div>
     </div>
   </div>
 </template>
@@ -41,14 +41,6 @@ export default {
     // BContent,
     // BNavSide
   },
-  watch: {
-    options() {
-      console.log('options 变化了')
-    },
-    items() {
-      console.log('items 变化了')
-    }
-  },
   computed: {
     ...mapGetters([
       'requesting',
@@ -77,15 +69,15 @@ export default {
             this.upInfo = res.data.owner;
             this.statCount = res.data.stat;
             //   this._setSwitchList()
-            this._getRecommend();
-            this._getComment();
-            this._getTags();
           }
         },
         (error) => {
           console.log(error);
         }
       );
+      this._getRecommend();
+      this._getComment();
+      this._getTags();
     },
     _getRecommend() {
       getRecommend(this.bvid).then(
@@ -131,13 +123,19 @@ export default {
         this.bvid = to.params.bvid
         this._getVideoInfo()
       }
-    }
+    },
+    options() {
+      console.log('options 变化了')
+    },
+    items() {
+      console.log('items 变化了')
+    },
   }
 }
 </script>
 
-<style lang="stylus">
-  #index 
+<style scoped lang="stylus"  >
+  #videopage 
     font-family "Microsoft YaHei",Arial,Helvetica,sans-serif
     -webkit-font-smoothing antialiased
     font-size 12px
@@ -148,6 +146,7 @@ export default {
     min-width 990px
     tap-highlight-color transparent
     -webkit-tap-highlight-color transparent
+    
     .v-warp
             max-width 1984px
             min-width 988px
@@ -156,18 +155,23 @@ export default {
             -ms-flex-pack center
             justify-content center
             padding :0 68px
+            
         .v-R
+        
             max-width 1984px
             min-width 988px
-            display block
-            
+            display inline-block
+           
         .v-L
+        
             width: 320px
-            display block
+            display inline-block
             -ms-flex: none
             flex: none
             margin-left: 30px
+            
     .wnd-mask
+    
       position fixed
       width 100%
       height 150%
@@ -177,4 +181,5 @@ export default {
       top 0px
       left 0px
       transition .2s
+      
 </style>
