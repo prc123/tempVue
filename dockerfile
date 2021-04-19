@@ -1,16 +1,16 @@
-FROM ubuntu:latest
+FROM node:latest
 
 WORKDIR /app
-
-COPY ./requirements.txt .
 
 RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 RUN  apt-get clean
 RUN apt-get update
-RUN apt-get install -y nodejs
-RUN npm install
-RUN npm build
+
 COPY . .
+
+RUN npm install --registry https://registry.npm.taobao.org install express
+RUN npm build
+
 
 EXPOSE 9050
 
