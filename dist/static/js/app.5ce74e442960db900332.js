@@ -444,8 +444,8 @@ webpackJsonp([2,0],[
 	  value: true
 	});
 	
-	var serverRoot = ( true ? 'http://www.lybenson.com' : 'http://127.0.0.1') + ':9050';
-	var serverAPi = ( true ? 'http://www.lybenson.com' : 'http://127.0.0.1') + ':9050';var banner = exports.banner = serverRoot + '/banner';
+	var serverRoot = ( true ? 'http://www.lybenson.com' : 'http://39.99.132.71') + ':9050';
+	var serverAPi = ( true ? 'http://www.lybenson.com' : 'http://39.99.132.71') + ':9050';var banner = exports.banner = serverRoot + '/banner';
 	
 	var ranking3 = exports.ranking3 = serverRoot + '/ranking3';
 	
@@ -7864,4 +7864,4 @@ webpackJsonp([2,0],[
 
 /***/ })
 ]);
-//# sourceMappingURL=app.2123e8d0006de6227b5b.js.map
+//# sourceMappingURL=app.5ce74e442960db900332.js.map
