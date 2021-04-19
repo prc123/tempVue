@@ -1,6 +1,6 @@
 
-const serverRoot = `${process.env.NODE_ENV === 'production' ? 'http://www.lybenson.com' : 'http://39.99.132.71'}:9050`
-const serverAPi = `${process.env.NODE_ENV === 'production' ? 'http://www.lybenson.com' : 'http://39.99.132.71'}:9050`  /// "https://api.bilibili.com/"
+const serverRoot = `${process.env.NODE_ENV === 'production' ? 'http://39.99.132.71' : 'http://127.0.0.1'}:9050`
+const serverAPi = `${process.env.NODE_ENV === 'production' ? 'http://39.99.132.71' : 'http://127.0.0.1'}:9050`  /// "https://api.bilibili.com/"
 
 
 
