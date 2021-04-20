@@ -1,14 +1,10 @@
-FROM node:latest
+FROM nginx
 
-WORKDIR /app
 
 RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 
-COPY . .
-
-RUN npm install --registry https://registry.npm.taobao.org
-RUN npm build
+COPY ./dist/ /usr/share/nginx/html/
+RUN service nginx start
 
 
-EXPOSE 9050
 
